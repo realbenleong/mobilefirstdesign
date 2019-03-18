@@ -1,0 +1,62 @@
+#siteMain
+  #siteMainScrollImage
+    height: 20em
+    background-color: tint($baseColour,100%)
+    background: url(https://images.pexels.com/photos/52527/dentist-pain-borowac-cure-52527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    background-size: cover
+    background-position: center
+    margin: none
+    display: grid
+  #siteMainPersonaInfo
+    margin: none
+    background-color: tint($baseColour,100%)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 10em 10em
+    grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"
+    #PIImage
+      grid-area: PIImage
+      background: url(https://images.pexels.com/photos/325682/pexels-photo-325682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+      background-size: cover
+      background-position: center
+    #PIDetails
+      grid-area: PIDetails
+      padding: 2em
+      text-align: center
+      justify-content: center
+      align-items: center
+    #PIAccolades
+      grid-area: PIAccolades
+      padding: 2em
+      text-align: center
+      justify-content: center
+      align-items: center
+  #siteMainWhatWeDo
+    height: 20em
+    margin: none
+    background-color: darken($baseColour,20%)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"
+    div
+      color: tint($baseColour,80%)
+      padding: 1em
+      background-color: darken($baseColour,35%)
+      +alignItemCenter
+      overflow: hidden
+      object-fit: contain
+      img
+        max-height: 4em
+      li
+        font-size: 0
+      &:hover
+        background-color: tint($baseColour,100%)
+  #siteMainHandiwork
+    height: 20em
+    margin: none
+    background-color: tint($baseColour,100%)
+    background: url(https://images.pexels.com/photos/1919236/pexels-photo-1919236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    background-size: cover
+    background-position: center
+    display: grid
+    grid-template-columns: 1fr

@@ -1,0 +1,30 @@
+#siteHeader
+  color: tint($baseColour,80%)
+  background-color: darken($baseColour,35%)
+  display: grid
+  grid-template-columns: 2fr 1fr
+  grid-template-rows: 3em 3em
+  grid-template-areas: "siteHeaderLogo siteHeaderSearch" "siteHeaderLogo siteHeaderMobileNav"
+  width: 100%
+  div
+    &:hover
+      background-color: tint($baseColour,100%)
+      a
+        color: darken($baseColour,50%)
+      li
+        color: darken($baseColour,50%)
+  #siteHeaderNav
+    position: absolute
+    left: -9999px
+  #siteHeaderLogo
+    grid-area: siteHeaderLogo
+    +alignItemCenter
+  #siteHeaderSearch
+    grid-area: siteHeaderSearch
+    +alignItemCenter
+  #siteHeaderMobileNav
+    grid-area: siteHeaderMobileNav
+    +alignItemCenter
+#siteMainWhatWeDo
+  color: tint($baseColour,100%)
+  background-color: darken($baseColour,35%)

@@ -1,14 +1,156 @@
 body {
-  color: #515151;
+  color: #191919;
   font-family: Arial;
-  background-color: #9e9e9e; }
+  background-color: white; }
+
+a {
+  color: white;
+  text-decoration: none;
+  display: inline; }
+
+li {
+  list-style-type: none; }
+
+.siteGrid {
+  box-shadow: -2px 2px 4px #191919; }
+
+#siteHeader {
+  color: #e5e5e5;
+  background-color: #262626;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3em 3em;
+  grid-template-areas: "siteHeaderLogo siteHeaderSearch" "siteHeaderLogo siteHeaderMobileNav";
+  width: 100%; }
+  #siteHeader div:hover {
+    background-color: white; }
+    #siteHeader div:hover a {
+      color: black; }
+    #siteHeader div:hover li {
+      color: black; }
+  #siteHeader #siteHeaderNav {
+    position: absolute;
+    left: -9999px; }
+  #siteHeader #siteHeaderLogo {
+    grid-area: siteHeaderLogo;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  #siteHeader #siteHeaderSearch {
+    grid-area: siteHeaderSearch;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  #siteHeader #siteHeaderMobileNav {
+    grid-area: siteHeaderMobileNav;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+
+#siteMainWhatWeDo {
+  color: white;
+  background-color: #262626; }
+
+#siteMain #siteMainScrollImage {
+  height: 20em;
+  background-color: white;
+  background: url(https://images.pexels.com/photos/52527/dentist-pain-borowac-cure-52527.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  margin: none;
+  display: grid; }
+#siteMain #siteMainPersonaInfo {
+  margin: none;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10em 10em;
+  grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"; }
+  #siteMain #siteMainPersonaInfo #PIImage {
+    grid-area: PIImage;
+    background: url(https://images.pexels.com/photos/325682/pexels-photo-325682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center; }
+  #siteMain #siteMainPersonaInfo #PIDetails {
+    grid-area: PIDetails;
+    padding: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+  #siteMain #siteMainPersonaInfo #PIAccolades {
+    grid-area: PIAccolades;
+    padding: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+#siteMain #siteMainWhatWeDo {
+  height: 20em;
+  margin: none;
+  background-color: #4c4c4c;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"; }
+  #siteMain #siteMainWhatWeDo div {
+    color: #e5e5e5;
+    padding: 1em;
+    background-color: #262626;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: contain; }
+    #siteMain #siteMainWhatWeDo div img {
+      max-height: 4em; }
+    #siteMain #siteMainWhatWeDo div li {
+      font-size: 0; }
+    #siteMain #siteMainWhatWeDo div:hover {
+      background-color: white; }
+#siteMain #siteMainHandiwork {
+  height: 20em;
+  margin: none;
+  background-color: white;
+  background: url(https://images.pexels.com/photos/1919236/pexels-photo-1919236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr; }
+
+#siteClose {
+  height: 20em;
+  margin: none;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10em 10em;
+  grid-template-areas: "siteCloseContactUs" "siteCloseEmailNewsletter"; }
+  #siteClose #siteCloseContactUs {
+    padding: 1em; }
+  #siteClose #siteCloseEmailNewsletter {
+    padding: 1em; }
+
+#siteFooter {
+  height: 5em;
+  margin: none;
+  padding: 1em;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 0.8em;
+  box-shadow: -2px 2px 4px #191919; }
+  #siteFooter li a {
+    color: #191919;
+    text-decoration: underline; }
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea {
   border: solid 1px black; }
 
 input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
 input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover {
-  background-color: yellow; }
+  background-color: white; }
 
 button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus,
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
