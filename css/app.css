@@ -92,8 +92,8 @@ li {
   background-color: #4c4c4c;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"; }
-  #siteMain #siteMainWhatWeDo div {
+  grid-template-areas: "whatWeDoDiv whatWeDoDiv" "whatWeDoDiv whatWeDoDiv" "whatWeDoDiv whatWeDoDiv"; }
+  #siteMain #siteMainWhatWeDo .whatWeDoDiv {
     color: #e5e5e5;
     padding: 1em;
     background-color: #262626;
@@ -102,13 +102,34 @@ li {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    object-fit: contain; }
-    #siteMain #siteMainWhatWeDo div img {
-      max-height: 4em; }
-    #siteMain #siteMainWhatWeDo div li {
-      font-size: 0; }
-    #siteMain #siteMainWhatWeDo div:hover {
-      background-color: white; }
+    object-fit: contain;
+    position: relative; }
+    #siteMain #siteMainWhatWeDo .whatWeDoDiv img {
+      max-height: 5em;
+      height: 100%;
+      transition: 0.5s;
+      filter: blur(0em); }
+    #siteMain #siteMainWhatWeDo .whatWeDoDiv div {
+      position: absolute;
+      color: #191919;
+      background-color: white;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: inherit;
+      align-items: inherit;
+      visibility: hidden;
+      bottom: -2em;
+      transition: 0.5s; }
+    #siteMain #siteMainWhatWeDo .whatWeDoDiv:hover div {
+      visibility: visible;
+      opacity: 0.8;
+      bottom: 0em; }
+    #siteMain #siteMainWhatWeDo .whatWeDoDiv:hover img {
+      max-height: 10em;
+      height: 150%;
+      filter: blur(0.2em); }
 #siteMain #siteMainHandiwork {
   height: 20em;
   margin: none;

@@ -37,20 +37,42 @@
     background-color: darken($baseColour,20%)
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-template-areas: "PIImage PIDetails" "PIImage PIAccolades"
-    div
+    grid-template-areas: "whatWeDoDiv whatWeDoDiv" "whatWeDoDiv whatWeDoDiv" "whatWeDoDiv whatWeDoDiv"
+    .whatWeDoDiv
       color: tint($baseColour,80%)
       padding: 1em
       background-color: darken($baseColour,35%)
       +alignItemCenter
       overflow: hidden
       object-fit: contain
+      position: relative
       img
-        max-height: 4em
-      li
-        font-size: 0
-      &:hover
+        max-height: 5em
+        height: 100%
+        transition: 0.5s
+        filter: blur(0em)
+      div
+        position: absolute
+        color: darken($baseColour,40%)
         background-color: tint($baseColour,100%)
+        opacity: 0
+        height: 100%
+        width: 100%
+        display: flex
+        justify-content: inherit
+        align-items: inherit
+        visibility: hidden
+        bottom: -2em
+        transition: 0.5s
+      &:hover
+        div
+          visibility: visible
+          opacity: 0.8
+          bottom: 0em
+        img
+          max-height: 10em
+          height: 150%
+          filter: blur(0.2em)
   #siteMainHandiwork
     height: 20em
     margin: none
